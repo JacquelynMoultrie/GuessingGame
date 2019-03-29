@@ -35,11 +35,19 @@ document.onkeypress = function (e){
         display = "";
         randomLtr = randomLtr();
          
-
+    }
+    else if(guessesLeft>1)
+    {
+        guessesLeft-= 1;
 
     }
-
-
+    else{
+        losses += 1;
+        guessesLeft=9;
+        display = "";
+        randomLtr = randomLtr();
+        
+    }
 };  
 
 
